@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+/* css init */
+* {padding:0px;margin: 0px}
+
+/* etc init */
+ul, li, ol, dd, dt {list-style: none}
+
+.parallax {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	margin: 0px auto;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover
+}
+.parallax.bg1 {
+	background-image: url(http://ts.daumcdn.net/custom/blog/100/1006037/skin/images/7.jpg)
+}
+.parallax.bg2 {
+	background-image: url(http://ts.daumcdn.net/custom/blog/100/1006037/skin/images/11.jpg)
+}
+.parallax.bg3 {
+	height: 250px;
+	background-image: url(http://ts.daumcdn.net/custom/blog/100/1006037/skin/images/16.jpg);
+}
+
+/* dynamic layout system */
+.col-1 {width: 100%}
+.col-1-3 {width: 33.3333333333%}
+.col-2-3 {width: 66.6666666666%}
+
+header {}
+header h1{margin:0 auto;padding:50px 0px;display: block;width: 300px;text-align: center;}
+
+nav {width: 100%;height: 60px;background: #000;color: #fff}
+nav ul {clear:both;overflow: hidden;width:100%;max-width: 700px;margin: 0 auto;line-height: 60px}
+nav ul li {float:left;display: inline-block; width: 25%;max-width: 200px;text-align: center;}
+nav ul li:hover {background: red; color:#fff;}
+
+#category {z-index: 999}
+#category ul > li > ul {display:none;}
+#category ul > li:hover > ul {display:block;}
+
+.content {padding: 20px}
+.content-list {margin: 0px 20px}
+.content-list li {padding:10px;line-height: 40px;border-top: 1px solid #eee}
+.content-list li:first-child {border-top:0px;}
+
+.content-info {border-bottom:1px solid #ddd;}
+
+.page-box {width: 100%}
+.page-list {clear: both;overflow: hidden;margin: 0px;text-align: center;font-size:12px;}
+.page-list li {padding:8px 10px;margin-left: 8px;display: inline-block;background:#eee;border:1px solid #ddd;}
+.page-list li:first-child {margin-left: 0px}
+.page-list li:hover {background: red; color: #fff}
+
+.recent-box {clear: both;overflow: hidden;}
+.recent-box div {float: left;}
+
+.last-info {text-align: center;}
+.last-info span {display: inline-block;line-height: 30px;margin-top: 110px;padding:10px;border:1px solid #fff;color:#fff;}
+</style>
+<!-- HTML5 element support for IE6-8 -->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+(function(){
+	console.log("start from here");
+})();
+</script>
+</head>
+<body>
+<div class="conteiner">
+	<header>
+		<h1>It's dynamic layout.</h1>
+		<nav id="category">
+			<ul>
+				<li>menu1 - 인트로</li>
+				<li>menu2 - 일상생활
+					<!--
+					<ul>
+						<li>세부 내용</li>
+					</ul>
+					-->
+				</li>
+				<li>menu3</li>
+				<li>menu4 - 방명록</li>
+			</ul>
+		</nav>
+	</header>
+	<section class="parallax bg1">
+		<div>test for test </div>
+	</section>
+	<section class="content">
+		<!-- 리스트 부터 -->
+		<div class="content-info">
+			<h2>html/layout 에 해당하는 글 총 7건</h2>
+		</div>
+		<ul class="content-list">
+			<li>
+				<span class="content-list-title">리스트 내용 1 입니다..</span>
+				<span class="content-list-author">Axsusia</span>
+				<span class="content-list-date">2014.06.31</span>
+			</li>
+			<li>리스트 내용 2 입니다..</li>
+			<li>리스트 내용 3 입니다..</li>
+			<li>리스트 내용 4 입니다..</li>
+			<li>리스트 내용 5 입니다..</li>
+			<li>리스트 내용 6 입니다..</li>
+			<li>리스트 내용 7 입니다..</li>
+			<li>리스트 내용 8 입니다..</li>
+		</ul>
+
+		<!-- contents body -->
+		<div class="content-info">
+			<h2>Let's talk about dynamic layout systm.</h2>
+			<div>
+				<span class="author">Axsusia</span>
+				<span class="date">2014.06.31</span>
+			</div>
+		</div>
+		<div class="content-article">
+			The system make like this.
+			<br />
+			Fisrt, you have to set your blog .
+			<br />
+			Secend, Make like this;
+		</div>
+
+		<!-- comment -->
+		<div class="content-comment">
+			<div class="content-comment-input-box">
+				<input type="text" name="" value="id">
+				<input type="text" name="" value="pass">
+				<input type="text" name="" value="homepage">
+				<input type="text" name="box" value="댓글 입력">
+				<button type="button">전</button>
+			</div>
+			<div class="content-comment-list">
+
+			</div>
+			<div>
+			</div>
+		</div>
+
+		<!-- paging -->
+		<div class="page-box"> 
+			<ul class="page-list">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+			</ul>
+		</div>
+
+	</section>
+	<section class="parallax bg2">
+		<div></div>
+	</section>
+	<footer class="content">
+		<div class="recent-box">
+			<div class="recent-article-box">
+				<dl>
+					<dt>[최근글]</dt>
+					<dd>1. Setting Blog for article</dd>
+				</dl>
+			</div>
+			<div class="recent-reply-box">
+				<dl>
+					<dt>[최근댓글]</dt>
+					<dd></dd>
+				</dl>
+			</div>
+		</div>
+		하단 카피라이트 및 정보 내용 ! 
+	</footer>
+	<section class="송 bg3">
+		<div class="last-info">
+			<span>skin made by "Axsusia"</span>
+		</div>
+	</section>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>-->
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.nicescroll/3.5.4/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="./image/parallax.js"></script>
+<script type="text/javascript">
+console.log("end");
+</script>
+</body>
+</html>
