@@ -2,69 +2,10 @@
 <html lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="./style.css">
 <style>
-/* css init */
-* {padding:0px;margin: 0px}
 
-/* etc init */
-ul, li, ol, dd, dt {list-style: none}
-
-.parallax {
-	position: relative;
-	width: 100%;
-	height: 500px;
-	margin: 0px auto;
-	background-attachment: fixed;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: cover
-}
-.parallax.bg1 {
-	background-image: url(http://ts.daumcdn.net/custom/blog/100/1006037/skin/images/7.jpg)
-}
-.parallax.bg2 {
-	background-image: url(http://ts.daumcdn.net/custom/blog/100/1006037/skin/images/11.jpg)
-}
-.parallax.bg3 {
-	height: 250px;
-	background-image: url(http://ts.daumcdn.net/custom/blog/100/1006037/skin/images/16.jpg);
-}
-
-/* dynamic layout system */
-.col-1 {width: 100%}
-.col-1-3 {width: 33.3333333333%}
-.col-2-3 {width: 66.6666666666%}
-
-header {}
-header h1{margin:0 auto;padding:50px 0px;display: block;width: 300px;text-align: center;}
-
-nav {width: 100%;height: 60px;background: #000;color: #fff}
-nav ul {clear:both;overflow: hidden;width:100%;max-width: 700px;margin: 0 auto;line-height: 60px}
-nav ul li {float:left;display: inline-block; width: 25%;max-width: 200px;text-align: center;}
-nav ul li:hover {background: red; color:#fff;}
-
-#category {z-index: 999}
-#category ul > li > ul {display:none;}
-#category ul > li:hover > ul {display:block;}
-
-.content {padding: 20px}
-.content-list {margin: 0px 20px}
-.content-list li {padding:10px;line-height: 40px;border-top: 1px solid #eee}
-.content-list li:first-child {border-top:0px;}
-
-.content-info {border-bottom:1px solid #ddd;}
-
-.page-box {width: 100%}
-.page-list {clear: both;overflow: hidden;margin: 0px;text-align: center;font-size:12px;}
-.page-list li {padding:8px 10px;margin-left: 8px;display: inline-block;background:#eee;border:1px solid #ddd;}
-.page-list li:first-child {margin-left: 0px}
-.page-list li:hover {background: red; color: #fff}
-
-.recent-box {clear: both;overflow: hidden;}
-.recent-box div {float: left;}
-
-.last-info {text-align: center;}
-.last-info span {display: inline-block;line-height: 30px;margin-top: 110px;padding:10px;border:1px solid #fff;color:#fff;}
 </style>
 <!-- HTML5 element support for IE6-8 -->
 <!--[if lt IE 9]>
@@ -105,17 +46,27 @@ nav ul li:hover {background: red; color:#fff;}
 		</div>
 		<ul class="content-list">
 			<li>
+				<span class="content-list-img"><img src="http://imgnews.naver.net/image/311/2014/07/03/1404366848920_99_20140703150403.png" alt="리스트 이미지"></span>
 				<span class="content-list-title">리스트 내용 1 입니다..</span>
-				<span class="content-list-author">Axsusia</span>
-				<span class="content-list-date">2014.06.31</span>
+				<span class="content-list-dtl">이번 앨범 'ICE BABY'는 연인 사이에 시간이 지날수록 점점 변해가는 남자의 행동들을 구체적이고 재미있게 풀어냈다. 여자라면 누구나 공감할 수 있는 가사와 중독성이 깊은 멜로디를 갖고 있다. </span>
+				<!--<span class="content-list-author">Axsusia</span>-->
+				<!--<span class="content-list-date">2014.06.31</span>-->
 			</li>
-			<li>리스트 내용 2 입니다..</li>
-			<li>리스트 내용 3 입니다..</li>
-			<li>리스트 내용 4 입니다..</li>
-			<li>리스트 내용 5 입니다..</li>
-			<li>리스트 내용 6 입니다..</li>
-			<li>리스트 내용 7 입니다..</li>
-			<li>리스트 내용 8 입니다..</li>
+			<li>
+				<span class="content-list-img"><img src="http://imgnews.naver.net/image/311/2014/07/03/1404366848920_99_20140703150403.png" alt="리스트 이미지"></span>
+				<span class="content-list-title">리스트 내용 1 입니다..</span>
+				<span class="content-list-dtl">이번 앨범 'ICE BABY'는 연인 사이에 시간이 지날수록 점점 변해가는 남자의 행동들을 구체적이고 재미있게 풀어냈다. 여자라면 누구나 공감할 수 있는 가사와 중독성이 깊은 멜로디를 갖고 있다. </span>
+			</li>
+			<li>
+				<span class="content-list-img"><img src="http://imgnews.naver.net/image/311/2014/07/03/1404366848920_99_20140703150403.png" alt="리스트 이미지"></span>
+				<span class="content-list-title">리스트 내용 1 입니다..</span>
+				<span class="content-list-dtl">이번 앨범 'ICE BABY'는 연인 사이에 시간이 지날수록 점점 변해가는 남자의 행동들을 구체적이고 재미있게 풀어냈다. 여자라면 누구나 공감할 수 있는 가사와 중독성이 깊은 멜로디를 갖고 있다. </span>
+			</li>
+			<li>
+				<span class="content-list-img"><img src="http://imgnews.naver.net/image/311/2014/07/03/1404366848920_99_20140703150403.png" alt="리스트 이미지"></span>
+				<span class="content-list-title">리스트 내용 1 입니다..</span>
+				<span class="content-list-dtl">이번 앨범 'ICE BABY'는 연인 사이에 시간이 지날수록 점점 변해가는 남자의 행동들을 구체적이고 재미있게 풀어냈다. 여자라면 누구나 공감할 수 있는 가사와 중독성이 깊은 멜로디를 갖고 있다. </span>
+			</li>
 		</ul>
 
 		<!-- contents body -->
@@ -137,11 +88,25 @@ nav ul li:hover {background: red; color:#fff;}
 		<!-- comment -->
 		<div class="content-comment">
 			<div class="content-comment-input-box">
-				<input type="text" name="" value="id">
-				<input type="text" name="" value="pass">
-				<input type="text" name="" value="homepage">
-				<input type="text" name="box" value="댓글 입력">
-				<button type="button">전</button>
+				<p class="comment-input-info">
+					<label for="NAME">NAME</label>
+					<input class="comment-input" type="text" name="" value="id" >
+				</p>
+				<p class="comment-input-info">
+					<label for="PASSWORD">PASSWORD</label>
+					<input class="comment-input" type="text" name="" value="pass">
+				</p>
+				<p class="comment-input-info">
+					<label for="HOMEPAGE">HOMEPAGE</label>
+					<input class="comment-input" type="text" name="" value="homepage">
+				</p>
+				<p class="comment-input-info">
+					<label for="SECRET">비밀글</label>
+					<textarea class="comment-textarea"></textarea>
+				</p>
+				<p class="comment-input-info">
+					<button type="submit" value="댓글 달기" onclick="addComment(this, 15); return false;" class="submit anime-btn">Submit</button>
+				</p>
 			</div>
 			<div class="content-comment-list">
 
@@ -165,10 +130,12 @@ nav ul li:hover {background: red; color:#fff;}
 		</div>
 
 	</section>
+
 	<section class="parallax bg2">
 		<div></div>
 	</section>
-	<footer class="content">
+
+	<section class="content">
 		<div class="recent-box">
 			<div class="recent-article-box">
 				<dl>
@@ -184,12 +151,21 @@ nav ul li:hover {background: red; color:#fff;}
 			</div>
 		</div>
 		하단 카피라이트 및 정보 내용 ! 
-	</footer>
-	<section class="parallax bg3">
-		<div class="last-info">
-			<span>skin made by "Axsusia"</span>
-		</div>
 	</section>
+
+	<footer class="parallax bg3">
+		<div class="footer-info-box">
+			<p class="footer-info">
+				<a class="btn-up anime-btn" href="#" gumby-goto="top"></a>
+			</p>
+			<p class="footer-info">
+				<a href="/admin">Admin</a> / <a href="/admin/entry/post">Post</a>
+			</p>
+			<p class="footer-info">
+				qpress </a>'s Blog is designed by <a href="http://qpress.tistory.com">qpress</a>
+			</p>
+		</div>
+	</footer>
 </div>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <!--<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>-->
