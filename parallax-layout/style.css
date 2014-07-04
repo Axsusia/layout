@@ -16,6 +16,7 @@ html {
 
 /* etc init */
 ul, li, ol, dd, dt {list-style: none}
+a {text-decoration: none;}
 
 .parallax {
 	position: relative;
@@ -41,11 +42,40 @@ ul, li, ol, dd, dt {list-style: none}
 	background-image: url(http://ts.daumcdn.net/custom/blog/100/1006037/skin/images/16.jpg);
 }
 
-/* dynamic layout system */
+/* common css */
 .col-1 {width: 100%}
 .col-1-3 {width: 33.3333333333%}
 .col-2-3 {width: 66.6666666666%}
 
+.word-break {
+	text-align: justify;
+	word-break: keep-all;
+	word-wrap: break-word;
+}
+
+.word-hidden {
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.anime-btn, .anime-btn:hover, a, a:hover {
+	cursor: pointer;
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+/* bi */
 header {background: #E4E24F;text-align: center;}
 header h1{margin:0 auto;padding:50px 0px;font-size:6em;color:#fff;}
 
@@ -58,12 +88,44 @@ nav ul li:hover {background: #E4E24F; color:#fff;}
 #category ul > li > ul {display:none;}
 #category ul > li:hover > ul {display:block;}
 
-.content {padding: 20px}
-.content-list {margin: 0px 20px}
-.content-list li {padding:10px;line-height: 40px;border-top: 1px solid #eee}
-.content-list li:first-child {border-top:0px;}
+.container {padding: 0px 20px;max-width: 1200px;margin: 0 auto;}
+
+.content-list {width: 100%;margin: 0px 0px;text-align: center}
+.content-list li {width: 24%;display:inline-block;margin-bottom:35px;padding:0px 5px;}
+.content-list li:first-child {border-top: 0px;}
+.content-list .list-img img {width: 100%;height: auto}
+.content-list .list-title {width: 100%;display:block;padding: 6px 0px;font-weight: bold;letter-spacing: -1px;text-align: left;}
+.content-list .list-dtl {line-height: 140%; height: 65px;display: block;overflow: hidden;font-size: 12px}
 
 .content-info {border-bottom:1px solid #ddd;padding: 40px 0px;margin-bottom: 40px;text-align: center;}
+.content-info .date {color:#fff;background: #333;}
+
+article {
+	line-height: 150%
+}
+
+.tag-box {margin:5px 0px;}
+.tag-box:before {content:'Tag';display:block;font-weight: bold;}
+.tag-box .tag-item {
+	display:inline-block;
+	padding:6px;
+	background: #eee;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius:1em;
+	-webkit-border-radius:1em;
+	-moz-border-radius:1em;
+	-o-border-radius:1em;
+	box-shadow: 1px 1px 0px #888;
+	-webkit-box-shadow: 1px 1px 0px #888;
+	-moz-box-shadow: 1px 1px 0px #888;
+	-o-box-shadow: 1px 1px 0px #888;
+	text-shadow:1px 1px #fff;
+	-webkit-text-shadow:1px 1px #fff;
+	-moz-text-shadow:1px 1px #fff;
+	-o-text-shadow:1px 1px #fff;
+}
+.tag-box .tag-item:before {content:'ㆍ ';font-weight:bold;}
 
 .page-box {width: 100%}
 .page-list {clear: both;overflow: hidden;margin: 0px;text-align: center;font-size:12px;}
@@ -77,7 +139,7 @@ nav ul li:hover {background: #E4E24F; color:#fff;}
 .last-info {text-align: center;}
 .last-info span {display: inline-block;line-height: 30px;margin-top: 110px;padding:10px;border:1px solid #fff;color:#fff;}
 
-.comment-input, .comment-textarea {
+.comment-input-info input, textarea {
 	padding: 0 10px;
 	background: #fff;
 	border: 1px solid #d8d8d8;
@@ -98,7 +160,7 @@ nav ul li:hover {background: #E4E24F; color:#fff;}
 	-webkit-appearance: none;
 	font-weight: 300;
 }
-.comment-textarea {height: 100px}
+.comment-input-info textarea {height: 150px}
 .comment-input-info label {
 	display: block;
 	font-size: 16px;
@@ -107,35 +169,6 @@ nav ul li:hover {background: #E4E24F; color:#fff;}
 	cursor: pointer;
 	margin-top: 10px;
 	margin-bottom: 3px;
-}
-.anime-btn {
-	cursor: pointer;
-	-webkit-transition-property: all;
-	-moz-transition-property: all;
-	-o-transition-property: all;
-	transition-property: all;
-	-webkit-transition-duration: 0.5s;
-	-moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-	-webkit-transition-timing-function: ease;
-	-moz-transition-timing-function: ease;
-	-o-transition-timing-function: ease;
-	transition-timing-function: ease;
-}
-.anime-btn:hover {
-	-webkit-transition-property: all;
-	-moz-transition-property: all;
-	-o-transition-property: all;
-	transition-property: all;
-	-webkit-transition-duration: 0.5s;
-	-moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-	-webkit-transition-timing-function: ease;
-	-moz-transition-timing-function: ease;
-	-o-transition-timing-function: ease;
-	transition-timing-function: ease;
 }
 
 .comment-input-info .submit {
@@ -193,6 +226,7 @@ footer a {
 	font-weight: 600;
 	text-align: center;
 }
-.footer-info .btn-up:hover{
+.footer-info a:hover {
 	color: #fe7e17;
 }
+/* media Q start */
