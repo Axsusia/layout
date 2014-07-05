@@ -20,19 +20,49 @@
 <body>
 <div class="wrap">
 	<header>
-		<h1>It's dynamic layout.</h1>
+		<div class="header-box">
+			<div class="header-title"><h1>It's dynamic layout.</h1></div>
+			<div class="header-info">
+				<p>This is infometion</p>
+				<p>teat</p>
+				<p>Blog</p>
+			</div>
+		</div>
 		<nav id="category">
 			<ul>
-				<li>menu1 - 인트로</li>
-				<li>menu2 - 일상생활
-					<!--
+				<li class="category-dep-2">Notice
 					<ul>
-						<li>세부 내용</li>
+						<li>first notice</li>
+						<li>secend notice</li>
+						<li>th notice</li>
 					</ul>
-					-->
 				</li>
-				<li>menu3</li>
-				<li>menu4 - 방명록</li>
+				<li class="category-dep-3">Category
+					<ul>
+						<li>
+							All
+							<ul>
+								category 1
+								<li>
+									<ul>
+										<li>submenu1</li>
+										<li>submenu2</li>
+										<li>submenu3</li>
+										<li>submenu4</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="category-dep-2">Media
+					<ul>
+						<li>Picture</li>
+						<li>Location</li>
+						<li>Tag</li>
+					</ul>
+				</li>
+				<li class="category-dep-1">GuestBook</li>
 			</ul>
 		</nav>
 	</header>
@@ -86,8 +116,8 @@
 		<div class="content-info">
 			<h2>Let's talk about dynamic layout systm.</h2>
 			<div>
-				<p class="author">Axsusia</p>
-				<p class="date">2014.06.31</p>
+				<!--<p class="author">Axsusia</p>-->
+				<p class="date"><span>2014.06.31</span></p>
 			</div>
 		</div>
 		<article class="article">
@@ -239,6 +269,12 @@
 <script type="text/javascript" src="./image/parallax.js"></script>
 <script type="text/javascript">
 console.log("end");
+var getNavHeight = function () {
+	console.log($("nav").height());
+	console.log($(document).height());
+	//console.log($(document).height());
+}
+getNavHeight();
 </script>
 </body>
 </html>
