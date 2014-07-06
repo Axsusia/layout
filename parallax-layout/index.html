@@ -10,7 +10,6 @@
 <![endif]-->
 <script>
 (function(){
-	console.log("start from here");
 })();
 </script>
 </head>
@@ -33,9 +32,9 @@
 				<li class="category-dep-2">
 					<p>Notice</p>
 					<ul>
-						<li>first notice</li>
-						<li>secend notice</li>
-						<li>th notice</li>
+						<li><a href="#">first notice</a></li>
+						<li><a href="#">secend notice</a></li>
+						<li><a href="#">th notice</a></li>
 					</ul>
 				</li>
 				<li class="category-dep-3">
@@ -57,9 +56,11 @@
 									<a href="#">category 2</a>
 									<ul>
 										<li><a href="#">submenu1</a></li>
+										<!--
 										<li><a href="#">submenu2</a></li>
 										<li><a href="#">submenu3</a></li>
 										<li><a href="#">submenu4</a></li>
+										-->
 									</ul>
 								</li>
 							</ul>
@@ -85,7 +86,7 @@
 		<!-- 리스트 부터 -->
 		<div class="content-info">
 			<h2>html/layout 에 해당하는 글 총 7건</h2>
-			<hr></hr>
+			<hr/>
 		</div>
 		<ul class="content-list">
 			<li>
@@ -128,6 +129,7 @@
 		<!-- contents tag list -->
 		<div class="content-info">
 			<h2>TAG LIST</h2>
+			<hr/>
 			<div>
 			</div>
 		</div>
@@ -151,6 +153,7 @@
 				<!--<p class="author">Axsusia</p>-->
 				<p class="date"><span>2014.06.31</span></p>
 			</div>
+			<hr/>
 		</div>
 		<article class="article">
 			<p>
@@ -173,6 +176,7 @@
 		<!-- comment -->
 		<div class="content-info">
 			<h2>Write something in here.</h2>
+			<hr/>
 			<!--
 			<div>
 				<p class="author">Axsusia</p>
@@ -337,7 +341,6 @@
 <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.nicescroll/3.5.4/jquery.nicescroll.min.js"></script>
 <script type="text/javascript" src="./image/parallax.js"></script>
 <script type="text/javascript">
-console.log("end");
 var $nav = $("nav");
 var $headerBox = $(".header-box");
 var $navTop = $("nav").offset().top;
