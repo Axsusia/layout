@@ -27,6 +27,9 @@
 		</div>
 		<nav id="category">
 			<ul>
+				<li class="category-dep-1">
+					<p>HOME</p>
+				</li>
 				<li class="category-dep-2">
 					<p>Notice</p>
 					<ul>
@@ -82,6 +85,7 @@
 		<!-- 리스트 부터 -->
 		<div class="content-info">
 			<h2>html/layout 에 해당하는 글 총 7건</h2>
+			<hr></hr>
 		</div>
 		<ul class="content-list">
 			<li>
@@ -295,6 +299,9 @@
 	</section>
 
 	<section class="container">
+		<div class="search-box">
+			<input type="text" placeholder="search" />
+		</div>
 		<div class="recent-box">
 			<div class="recent-article-box">
 				<dl>
@@ -309,7 +316,6 @@
 				</dl>
 			</div>
 		</div>
-		하단 카피라이트 및 정보 내용 ! 
 	</section>
 
 	<footer class="parallax bg3">
@@ -332,12 +338,30 @@
 <script type="text/javascript" src="./image/parallax.js"></script>
 <script type="text/javascript">
 console.log("end");
-var getNavHeight = function () {
-	console.log($("nav").height());
-	console.log($(document).height());
-	//console.log($(document).height());
-}
-getNavHeight();
+var $nav = $("nav");
+var $headerBox = $(".header-box");
+var $navTop = $("nav").offset().top;
+$(window).scroll(function(){
+	var scrollTop = $(window).scrollTop();
+	//var navTop = $("nav").offset().top;
+	if (scrollTop >= $navTop){
+		$nav.css({
+			"position" : "fixed",
+			"top" : "0px"
+		});
+		$headerBox.css({
+			"margin-bottom" : "80px"
+		})
+	} else {
+		$nav.css({
+			"position" : "inherit",
+			"top" : "0px"
+		});
+		$headerBox.css({
+			"margin-bottom" : "0px"
+		})
+	}
+})
 </script>
 </body>
 </html>
