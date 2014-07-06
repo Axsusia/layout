@@ -4,9 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="./style.css">
-<style>
-
-</style>
 <!-- HTML5 element support for IE6-8 -->
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -124,6 +121,25 @@
 			</li>
 		</ul>
 
+		<!-- contents tag list -->
+		<div class="content-info">
+			<h2>TAG LIST</h2>
+			<div>
+			</div>
+		</div>
+		<div class="content-tag">
+			<div>
+				<ul class="tag-list">
+					<li class="tag-item">Web</li>
+					<li class="tag-item">system</li>
+					<li class="tag-item">content</li>
+					<li class="tag-item">tag</li>
+					<li class="tag-item">list</li>
+					<li class="tag-item">more</li>
+				</ul>
+			</div>
+		</div>
+
 		<!-- contents body -->
 		<div class="content-info">
 			<h2>Let's talk about dynamic layout systm.</h2>
@@ -184,29 +200,61 @@
 			</div>
 			<div class="comment-list-box">
 				<ul class="comment-list">
-					<li class="comment-item">
+					<li class="item">
 						<div>-- MORE --</div>
 					</li>
-					<li class="item">
+					<li class="item word-break">
+						<p class="dtl">it's reply for aticle. reply test !!! it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!it's reply for aticle. reply test !!!</p>
 						<p class="name">Axsusia</p>
-						<p class="dtl">it's reply for aticle.</p>
 						<p class="date">2014.03.03</p>
-						<ul class="comment-reply">
+						<p class="reply" title="Add Reply"><button class="anime-btn"> + </button></p>
+						<p class="delete" title="Delete Reply"><button class="anime-btn"> - </button></p>
+						<ul class="comment-reply-list">
 							<li class="item">
-								<p class="name">Whiszdis</p>
 								<p class="dtl">replay-reply</p>
+								<p class="name">Whiszdis</p>
 								<p class="date">2014.03.03</p>
+								<p class="delete" title="Reply Delete"><button class="anime-btn"> - </button></p>
+							</li>
+							<li class="item">
+								<p class="dtl">secend-replay-reply</p>
+								<p class="name">Whiszdis</p>
+								<p class="date">2014.03.03</p>
+								<p class="delete" title="Reply Delete"><button class="anime-btn"> - </button></p>
+							</li>
+							<li class="item">
+								<p class="dtl">replay-reply</p>
+								<p class="name">Whiszdis</p>
+								<p class="date">2014.03.03</p>
+								<p class="delete" title="Reply Delete"><button> - </button></p>
+							</li>
+							<li></li>
+						</ul>
+					</li>
+					<li class="item">
+						<p class="dtl">it's reply for aticle. reply test !!!</p>
+						<p class="name">Axsusia</p>
+						<p class="date">2014.03.03</p>
+						<p class="reply" title="Add Reply"><button> + </button></p>
+						<p class="delete" title="Reply Delete"><button> - </button></p>
+						<ul class="comment-reply-list">
+							<li class="item">
+								<p class="dtl">replay-reply</p>
+								<p class="name">Whiszdis</p>
+								<p class="date">2014.03.03</p>
+								<p class="delete" title="Reply Delete"><button> - </button></p>
 							</li>
 							<li></li>
 							<li></li>
 							<li></li>
 						</ul>
 					</li>
-					<li>
-						
-					</li>
-					<li>
-						
+					<li class="item">
+						<p class="dtl">it's reply for aticle. reply test !!!</p>
+						<p class="name">Axsusia</p>
+						<p class="date">2014.03.03</p>
+						<p class="reply" title="Add Reply"><button class="anime-btn"> + </button></p>
+						<p class="delete" title="Reply Delete"><button class="anime-btn"> - </button></p>
 					</li>
 					<li>
 						
@@ -220,6 +268,7 @@
 		<!-- paging -->
 		<div class="content-page"> 
 			<ul class="page-list">
+				<li><</li>
 				<li>1</li>
 				<li>2</li>
 				<li>3</li>
@@ -228,6 +277,8 @@
 				<li>6</li>
 				<li>7</li>
 				<li>8</li>
+				<li>...</li>
+				<li>></li>
 			</ul>
 		</div>
 
