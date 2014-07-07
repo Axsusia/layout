@@ -188,19 +188,19 @@
 			<div class="comment-input-box">
 				<p class="comment-input-info">
 					<label for="NAME">NAME</label>
-					<input class="id" type="text" name="" value="id" >
+					<input class="id" type="text" name="" placeholder="ID" >
 				</p>
 				<p class="comment-input-info">
 					<label for="PASSWORD">PASSWORD</label>
-					<input class="password" type="text" name="" value="pass">
+					<input class="password" type="text" name="" placeholder="PASSWORD">
 				</p>
 				<p class="comment-input-info">
 					<label for="HOMEPAGE">HOMEPAGE</label>
-					<input class="homepage" type="text" name="" value="homepage">
+					<input class="homepage" type="text" name="" placeholder="HOMEPAGE">
 				</p>
 				<p class="comment-input-info">
 					<label for="SECRET">SECRET</label>
-					<textarea class="comment"></textarea>
+					<textarea class="comment" placeholder="write"></textarea>
 				</p>
 				<p class="comment-input-info">
 					<button type="submit" value="댓글 달기" onclick="addComment(this, 15); return false;" class="submit anime-btn">Submit</button>
@@ -344,9 +344,8 @@
 var $nav = $("nav");
 var $headerBox = $(".header-box");
 var $navTop = $("nav").offset().top;
-$(window).scroll(function(){
+var moveNav = function () {
 	var scrollTop = $(window).scrollTop();
-	//var navTop = $("nav").offset().top;
 	if (scrollTop >= $navTop){
 		$nav.css({
 			"position" : "fixed",
@@ -364,6 +363,10 @@ $(window).scroll(function(){
 			"margin-bottom" : "0px"
 		})
 	}
+}
+moveNav();
+$(window).scroll(function(){
+	moveNav();
 })
 </script>
 </body>
