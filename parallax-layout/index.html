@@ -188,19 +188,19 @@
 			<div class="comment-input-box">
 				<p class="comment-input-info">
 					<label for="NAME">NAME</label>
-					<input class="id" type="text" name="" placeholder="ID" >
+					<input class="id anime-btn" type="text" name="" placeholder="ID" >
 				</p>
 				<p class="comment-input-info">
 					<label for="PASSWORD">PASSWORD</label>
-					<input class="password" type="text" name="" placeholder="PASSWORD">
+					<input class="password anime-btn" type="text" name="" placeholder="PASSWORD">
 				</p>
 				<p class="comment-input-info">
 					<label for="HOMEPAGE">HOMEPAGE</label>
-					<input class="homepage" type="text" name="" placeholder="HOMEPAGE">
+					<input class="homepage anime-btn" type="text" name="" placeholder="HOMEPAGE">
 				</p>
 				<p class="comment-input-info">
 					<label for="SECRET">SECRET</label>
-					<textarea class="comment" placeholder="write"></textarea>
+					<textarea class="comment anime-btn" placeholder="write"></textarea>
 				</p>
 				<p class="comment-input-info">
 					<button type="submit" value="댓글 달기" onclick="addComment(this, 15); return false;" class="submit anime-btn">Submit</button>
@@ -304,7 +304,7 @@
 
 	<section class="container">
 		<div class="search-box">
-			<input type="text" placeholder="search" />
+			<input class="anime-btn" type="text" placeholder="search" />
 		</div>
 		<div class="recent-box">
 			<div class="recent-article-box">
@@ -346,6 +346,7 @@ var $headerBox = $(".header-box");
 var $navTop = $("nav").offset().top;
 var moveNav = function () {
 	var scrollTop = $(window).scrollTop();
+	//var 
 	if (scrollTop >= $navTop){
 		$nav.css({
 			"position" : "fixed",
