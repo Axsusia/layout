@@ -301,7 +301,6 @@ input:focus, textarea:focus {
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.625em;
-	cursor: pointer;
 	margin-top: 10px;
 	margin-bottom: 3px;
 }
@@ -445,10 +444,13 @@ header h1{margin:0 auto;font-size:1.3em;color:#fff;}
 .header-box .header-title {line-height: 41px}
 .header-box .header-info {display:none;}
 
-.content-list li {display: block;float: none;width: 100%}
 
 #category {height: auto;line-height: 220%;}
 #category > ul > li {width: 100%;float: none}
+
+.content-list li {display: block;float: none;width: 100%}
+
+.comment-reply-list {padding-left:40px;}
 }
 @media (max-width:320px){
 

@@ -343,11 +343,13 @@
 <script type="text/javascript">
 var $nav = $("nav");
 var $headerBox = $(".header-box");
-var $navTop = $(".header-box").height();
 var moveNav = function () {
-	var scrollTop = $(window).scrollTop();
+	var $scrollTop = $(window).scrollTop();
+	var $winW = $(window).width();
+	console.log($winW);
+	var $navTop = $(".header-box").height();
 	//var 
-	if (scrollTop >= $navTop){
+	if ($scrollTop >= $navTop && $winW > 480){
 		$nav.css({
 			"position" : "fixed",
 			"top" : "0px"
@@ -369,6 +371,9 @@ moveNav();
 $(window).scroll(function(){
 	moveNav();
 })
+$(window).resize(function(){
+	moveNav();
+}).resize();
 </script>
 </body>
 </html>
