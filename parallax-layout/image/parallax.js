@@ -1,5 +1,5 @@
 (function($) {
-	$("html").niceScroll();
+	//$("html").niceScroll();
 	
 	// Check if the section has the parallax class.
 	if ($('section').hasClass('parallax')) {
