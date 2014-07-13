@@ -601,12 +601,8 @@ header h1{margin:0 auto;font-size:1.3em;color:#fff;}
 #category {height: auto;line-height: 220%;}
 #category > ul > li {width: 100%;float: none}
 
-<<<<<<< HEAD
 .comment-input-info label {font-size:1em;}
 .content-list li {display: block;float: none;width: 100%;padding:0px;}
-=======
-.content-list li {display: block;float: none;width: 100%;padding: 0px}
->>>>>>> 9340c5440d51b6109aeca1800b26f673fac02668
 .comment-list .item .item-container > div {float: none}
 .comment-list .item .item-right {padding-left:0px;}
 .comment-list .item .item-left {width:auto;text-align:left;margin-bottom:15px;}
