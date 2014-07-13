@@ -427,7 +427,7 @@ input:focus, textarea:focus {
 .comment-list .item .name {
 	color: #000;
 	margin-top: 6px;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .comment-list .item .date {
