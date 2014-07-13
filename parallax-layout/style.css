@@ -10,13 +10,33 @@
 }
 nav, section {display:block;}
 /* body */ 
-html {
-	/*overflow-y:hidden*/
-}
-
 /* etc init */
 ul, li, ol, dd, dt {list-style: none}
 a {text-decoration: none;}
+
+button {
+	display: inline-block;
+	border: 1px solid #eee;
+	padding : 4px 6px;
+	background: #fff;
+	box-shadow: 1px 1px 0px #ddd;
+	-webkit-box-shadow: 1px 1px 0px #ddd;
+	-moz-box-shadow: 1px 1px 0px #ddd;
+	-ms-box-shadow: 1px 1px 0px #ddd;
+	-o-box-shadow: 1px 1px 0px #ddd;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-mos-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	text-align: center;
+}
+
+button:hover {
+	background: #333;
+	border: 1px solid #333;
+	color: #fff;
+}
 
 .parallax {
 	position: relative;
@@ -245,6 +265,7 @@ article {
 .tag-item {
 	display:inline-block;
 	padding:6px;
+	margin: 4px 0px;
 	background: #eee;
 	font-size: 12px;
 	font-weight: bold;
@@ -274,6 +295,33 @@ article {
 
 .last-info {text-align: center;}
 .last-info span {display: inline-block;line-height: 30px;margin-top: 110px;padding:10px;border:1px solid #fff;color:#fff;}
+
+.bg2 .content-user {
+	padding-top: 85px;
+	text-align: center;
+}
+.bg2 .content-user .user-img {
+	width: 83px;
+	height: 83px;
+	border:3px solid #fff;
+	border-radius:83px;
+	-webkit-border-radius:83px;
+	-mos-border-radius:83px;
+	-ms-border-radius:83px;
+	-o-border-radius:83px;
+	background:#eee;
+	margin: 0 auto;
+}
+.bg2 .content-user .user-name {
+	margin-top:10px;
+	font-size: 35px;
+	color:#fff;
+}
+
+
+
+
+
 
 input, textarea { /* .comment-input-info  */
 	padding: 0 10px;
@@ -312,7 +360,7 @@ input:focus, textarea:focus {
 	margin-bottom: 3px;
 }
 
-.comment-input-info label:after {content:'*';color:red;}
+.comment-input-info label:after {content:' *';color:red;}
 
 .comment-input-info .submit {
 	background-color: #222;
@@ -341,13 +389,13 @@ input:focus, textarea:focus {
 	color: #222;
 }
 .comment-list {
-	margin-top:50px;
+	margin-top:30px;
 }
 
 .comment-list > .item {
 	border-top:1px solid #ccc;
-	padding-top:30px;
-	padding-bottom:30px;
+	padding-top:20px;
+	padding-bottom:20px;
 	line-height:160%;
 }
 
@@ -359,11 +407,11 @@ input:focus, textarea:focus {
 	font-weight : bold;
 }*/
 .comment-list .item .item-left {
-	width:180px;
+	width:130px;
 	text-align: center;
 }
 .comment-list .item .item-right {
-	padding-left : 180px;
+	padding-left : 130px;
 	float:none;
 }
 
@@ -375,14 +423,17 @@ input:focus, textarea:focus {
 	margin: 0 auto;
 }
 
+.comment-list .item .name:before {content:'* ';color:red;}
 .comment-list .item .name {
-	color: red;
+	color: #000;
 	margin-top: 6px;
+	font-size: 12px;
 }
 
 .comment-list .item .date {
 	color: #ddd;
 	font-size: 12px;
+	margin: 0 auto;
 }
 .comment-list .item .button {display:inline-block;}
 .comment-list .item .date:before {content: '['}
@@ -393,30 +444,12 @@ input:focus, textarea:focus {
 .comment-list button {
 	width: 30px; 
 	height: 30px;
-	display: inline-block;
-	border: 1px solid #eee;
-	padding : 4px 6px;
-	background: #fff;
-	box-shadow: 1px 1px 0px #ddd;
-	-webkit-box-shadow: 1px 1px 0px #ddd;
-	-moz-box-shadow: 1px 1px 0px #ddd;
-	-ms-box-shadow: 1px 1px 0px #ddd;
-	-o-box-shadow: 1px 1px 0px #ddd;
-	border-radius:5px;
-	-webkit-border-radius:5px;
-	-mos-border-radius:5px;
-	-ms-border-radius:5px;
-	-o-border-radius:5px;
-	text-align: center;
-}
-.comment-list button:hover {
-	background: #333;
-	color: #fff;
 }
 
 .comment-reply-list .item { 
+	margin-top: 20px;
+	margin-left: 130px;
 	padding: 15px;
-	margin-top: 30px;
 	background: #fafafa;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -497,13 +530,22 @@ input:focus, textarea:focus {
 */
 
 .search-box {
-	margin : 50px 0px;
+	position: relative;
+	max-width: 500px;
+	width: 100%;
+	margin : auto;
+	margin-top : 50px;
 	text-align: center;
 }
 .search-box input {
-	width: 500px;
+	max-width: 500px;
+	width: 100%;
 	margin : 0 auto;
 }
+
+.search-box button:before {content:'* ';color:red;}
+.search-box button:after {content:'SEARCH';}
+.search-box button {position: absolute;right: 5px;top:5px;}
 
 footer a {
 	color:#fff;
@@ -551,6 +593,13 @@ header h1{margin:0 auto;font-size:1.3em;color:#fff;}
 #category > ul > li {width: 100%;float: none}
 
 .content-list li {display: block;float: none;width: 100%}
+.comment-list .item .item-container > div {float: none}
+.comment-list .item .item-right {padding-left:0px;}
+.comment-list .item .item-left {width:auto;text-align:left;margin-bottom:15px;}
+.comment-list .item .item-left > p {display: inline-block;}
+.comment-list .item .img {display:none !important;}
+
+.comment-reply-list .item {margin-left: 0px;}
 }
 @media (max-width:320px){
 
