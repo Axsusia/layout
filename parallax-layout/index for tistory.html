@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="qpress" />
+<meta name="keywords" content="병원" />
+<meta name="Web Front Programmed" content="Axsusia(엑수시아)" />
+<title>[##_title_##] :: [##_page_title_##]</title>
+<link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+<link rel="stylesheet" type="text/css" href="./style.css">
+<!-- HTML5 element support for IE6-8 -->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+(function(){
+})();
+</script>
+</head>
+<body>
+<s_t3>
+<div class="wrap">
+	<header>
+		<div class="header-box">
+			<div class="header-title"><h1>qpress</h1></div>
+			<div class="header-info">
+				<p>This is infometion</p>
+				<p>teat</p>
+				<p>Blog</p>
+			</div>
+		</div>
+		<nav id="category">
+			<ul>
+				<li class="category-dep-1">
+					<a href="/"><p>HOME</p></a>
+				</li>
+				<li class="category-dep-2">
+					<p>Notice</p>
+					<ul>
+						<li><a href="#">first notice</a></li>
+						<li><a href="#">secend notice</a></li>
+						<li><a href="#">th notice</a></li>
+					</ul>
+				</li>
+				<li class="category-dep-3">
+					<p>Category</p>
+					[##_category_list_##]
+				</li>
+				<li class="category-dep-2">
+					<p>Media</p>
+					<ul>
+						<li>Picture</li>
+						<li>Location</li>
+						<li>Tag</li>
+					</ul>
+				</li>
+				<li class="category-dep-1"><p>GuestBook</p></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="parallax bg1">
+	</section>
+
+	<section class="container">
+
+		<!-- 리스트 uu부터 !!!-->
+		<s_list>
+		<div class="content-info">
+			<h2>[##_list_conform_##] 에 해당하는 글 총 [##_list_count_##]건</h2>
+			<hr/>
+		</div>
+		<ul class="content-list">
+			<s_list_rep>
+			<li>
+				<a href="[##_list_rep_link_##]">
+					<p class="list-img"><img src="http://imgnews.naver.net/image/311/2014/07/03/1404366848920_99_20140703150403.png" alt="title img"></p>
+					<p class="list-title word-hidden">[##_list_rep_title_##]</p>
+					<p class="list-dtl word-break" >[##_list_rep_regdate_##]</p>
+					<!--<span class="content-list-author">ssw</span>-->
+					<!--<span class="content-list-date">2014.06.31</span>-->
+				</a>
+			</li>
+			</s_list_rep>
+		</ul>
+		</s_list>
+
+		<!-- contents tag list 
+		<div class="content-info">
+			<h2>TAG LIST</h2>
+			<hr/>
+			<div>
+			</div>
+		</div>
+		<div class="content-tag">
+			<div>
+				<ul class="tag-list">
+					<li class="tag-item">Web</li>
+					<li class="tag-item">system</li>
+					<li class="tag-item">content</li>
+					<li class="tag-item">tag</li>
+					<li class="tag-item">list</li>
+					<li class="tag-item">more</li>
+				</ul>
+			</div>
+		</div>
+		-->
+
+		<s_article_rep>
+		<!-- contents body -->
+		<div class="content-info">
+			<h2>[##_article_rep_title_##]</h2>
+			<div>
+				<!--<p class="author">ssw</p>-->
+				<p class="date"><span>[##_article_rep_date_##]</span></p>
+			</div>
+			<hr/>
+		</div>
+
+		<article class="article word-break">
+			[##_article_rep_desc_##]
+		</article>
+
+		<s_tag_label>
+		<div class="content-etc">
+			<div class="tag-box">
+				[##_tag_label_rep_##]
+			</div>
+		</div>
+		</s_tag_label>
+
+		<s_rp>
+		<div class="content-comment">
+			<s_rp_input_form>
+			<div class="comment-input-box">
+				<s_rp_member>
+				<s_rp_guest>
+				<p class="comment-input-info">
+					<label for="NAME">NAME</label>
+					<input class="id anime-btn" type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" placeholder="ID" >
+				</p>
+				<p class="comment-input-info">
+					<label for="PASSWORD">PASSWORD</label>
+					<input class="password anime-btn" type="text" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" placeholder="PASSWORD">
+				</p>
+				<p class="comment-input-info">
+					<label for="HOMEPAGE">HOMEPAGE</label>
+					<input class="homepage anime-btn" type="text" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" placeholder="HOMEPAGE">
+				</p>
+				</s_rp_guest>
+				<p class="comment-input-info">
+					<input type="checkbox" name="[##_rp_input_is_secret_##]"/><label for="SECRET">SECRET</label>
+				</p>
+				</s_rp_member>
+				<p class="comment-input-info">
+					<textarea class="comment anime-btn" name="[##_rp_input_comment_##]" placeholder="write"></textarea>
+				</p>
+				<p class="comment-input-info">
+					<button type="submit" value="댓글 달기" onclick="[##_rp_onclick_submit_##]" class="submit anime-btn">Submit</button>
+				</p>
+			</div>
+			</s_rp_input_form>
+			<div class="comment-list-box">
+				<s_rp_container>
+				<ul class="comment-list">
+					<!--<li class="item">
+						<div>-- MORE --</div>
+					</li>-->
+					<s_rp_rep>
+					<li class="item word-break" id="[##_rp_rep_id_##]">
+						<div class="item-container [##_rp_rep_class_##]">
+							<div class="item-left">
+								<p class="img">[##_rp_rep_name_##]</p>
+								<p class="name">[##_rp_rep_name_##]</p>
+								<p class="date">[##_rp_rep_date_##]</p>
+								<p class="button" title="Add Reply"><button type="button" class="add anime-btn" onclick="[##_rp_rep_onclick_reply_##]"></button></p>
+								<p class="button" title="Delete Reply"><button type="button" class="delete anime-btn" onclick="[##_rp_rep_onclick_delete_##]"></button></p>
+							</div>
+							<div class="item-right">
+								<p class="dtl">[##_rp_rep_desc_##]</p>
+							</div>
+						</div>
+						<s_rp2_container> 
+						<ul class="comment-reply-list">
+							<s_rp2_rep>
+							<li class="item" id="[##_rp_rep_id_##]">
+								<div class="item-container [##_rp_rep_class_##]">
+									<div class="item-left">
+										<button type="button" class="delete anime-btn" onclick="[##_rp_rep_onclick_delete_##]"></button> [##_rp_rep_name_##]
+										<!--<p class="img">[##_rp_rep_name_##]</p>-->
+										<!--
+										<p class="name">[##_rp_rep_name_##]</p>
+										<p class="date">[##_rp_rep_date_##]</p>
+										<p class="button" title="Reply Delete"><button type="button" class="delete anime-btn" onclick="[##_rp_rep_onclick_delete_##]"></button></p>
+										-->
+									</div>
+									<div class="item-right">
+										<p class="dtl">[##_rp_rep_desc_##]</p>
+									</div>
+								</div>
+							</li>
+							</s_rp2_rep>
+						</ul>
+						</s_rp2_container> 
+					</li>
+					</s_rp_rep>
+				</ul>
+				</s_rp_container>
+			</div>
+		</div>
+		</s_rp>
+		</s_article_rep><!-- ts 아티클 치환자 -->
+
+		<!-- comment -->
+		<s_guest>
+		<div class="content-info">
+			<h2>GUEST BOOK</h2>
+			<hr/>
+			<!--
+			<div>
+				<p class="author">ssw</p>
+				<p class="date">2014.06.31</p>
+			</div>
+			-->
+		</div>
+		<div class="content-comment">
+			<s_guest_input_form>
+			<div class="comment-input-box">
+				<p class="comment-input-info">
+					<label for="NAME">NAME</label>
+					<input class="id anime-btn" type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" placeholder="ID" >
+				</p>
+				<p class="comment-input-info">
+					<label for="PASSWORD">PASSWORD</label>
+					<input class="password anime-btn" type="text" name="[##_guest_input_password_##]" value="[##_guest_password_##]" placeholder="PASSWORD">
+				</p>
+				<p class="comment-input-info">
+					<label for="HOMEPAGE">HOMEPAGE</label>
+					<input class="homepage anime-btn" type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" placeholder="HOMEPAGE">
+				</p>
+				<p class="comment-input-info">
+					<input type="checkbox" name="[##_guest_input_is_secret_##]"/><label for="SECRET">SECRET</label>
+					<textarea class="comment anime-btn" name="[##_guest_textarea_body_##]" placeholder="write"></textarea>
+				</p>
+				<p class="comment-input-info">
+					<button type="button" value="댓글 달기" onclick="[##_guest_onclick_submit_##]" class="submit anime-btn">Submit</button>
+				</p>
+			</div>
+			</s_guest_input_form>
+			<s_guest_container>
+			<div class="comment-list-box">
+				<ul class="comment-list">
+					<!--<li class="item">
+						<div>-- MORE --</div>
+					</li>-->
+					<s_guest_rep>
+					<li class="item word-break" id="[##_guest_rep_id_##]">
+						<div class="item-container [##_guest_rep_class_##]">
+							<div class="item-left">
+								<p class="img">[##_guest_rep_name_##]</p>
+								<p class="name">[##_guest_rep_name_##]</p>
+								<p class="date">[##_guest_rep_date_##]</p>
+								<p class="button" title="Add Reply"><button type="button" class="add anime-btn" onclick="[##_guest_rep_onclick_reply_##]"></button></p>
+								<p class="button" title="Delete Reply"><button type="button" class="delete anime-btn" onclick="[##_guest_rep_onclick_delete_##]"></button></p>
+							</div>
+							<div class="item-right">
+								<p class="dtl">[##_guest_rep_desc_##]</p>
+							</div>
+						</div>
+						<s_guest_reply_container>
+						<ul class="comment-reply-list">
+							<s_guest_reply_rep>
+							<li class="item" id="[##_guest_rep_id_##]">
+								<div class="item-container [##_guest_rep_class_##]">
+									<div class="item-left">
+										<!--<p class="img">[##_guest_rep_name_##]</p>-->
+										<p class="name">[##_guest_rep_name_##]</p>
+										<p class="date">[##_guest_rep_date_##]</p>
+										<p class="button" title="Reply Delete"><button type="button" onclick="[##_guest_rep_onclick_delete_##]" class="delete anime-btn"></button></p>
+									</div>
+									<div class="item-right">
+										<p class="dtl">[##_guest_rep_desc_##]</p>
+									</div>
+								</div>
+							</li>
+							</s_guest_reply_rep>
+						</ul>
+						</s_guest_reply_container>
+					</li>
+					</s_guest_rep>
+				</ul>
+			</div>
+			<s_guest_container>
+		</div>
+		</s_guest>
+
+		<!-- paging -->
+		<s_paging>
+		<div class="content-page"> 
+			<span class="page-list">
+				<a [##_prev_page_##] class="[##_no_more_prev_##]">&lt;</a>
+				<s_paging_rep>
+				<a [##_paging_rep_link_##] class="num">[##_paging_rep_link_num_##]</a>
+				</s_paging_rep>
+				<a [##_next_page_##] class="[##_no_more_next_##]">&gt;</a>
+			</span>
+		</div>
+		</s_paging>
+
+	</section>
+
+	<section class="parallax bg2">
+		<div class="content-user">
+			<div class="user-img"><img src="" title="userName" alt="user-name"></div>
+			<div class="user-name">qpess</div>
+		</div>
+	</section>
+
+	<section class="container">
+	</section>
+
+	<section class="container">
+		<div class="search-box">
+			<p><input class="anime-btn" type="text" placeholder="search" /></p>
+			<p><button class="search anime-btn"></button></p>
+		</div>
+		<div class="recent-box">
+			<div class="recent-article-box">
+				<dl>
+					<dt>[최근글]</dt>
+					<dd>1. Setting Blog for article</dd>
+				</dl>
+			</div>
+			<div class="recent-reply-box">
+				<dl>
+					<dt>[최근댓글]</dt>
+					<dd></dd>
+				</dl>
+			</div>
+		</div>
+	</section>
+
+	<footer class="parallax bg3">
+		<div class="footer-info-box">
+			<p class="footer-info">
+				<a class="btn-up anime-btn" href="#" gumby-goto="top"></a>
+			</p>
+			<p class="footer-info">
+				<a href="/admin">Admin</a> / <a href="/admin/entry/post">Post</a>
+			</p>
+			<p class="footer-info">
+				Blog is designed by <a href="http://qpress.tistory.com">qpress</a>, Axsusia
+			</p>
+		</div>
+	</footer>
+</div>
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>-->
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.nicescroll/3.5.4/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="./image/parallax.js"></script>
+<script type="text/javascript">
+var $nav = $("nav");
+var $headerBox = $(".header-box");
+var moveNav = function () {
+	var $scrollTop = $(window).scrollTop();
+	var $winW = $(window).width();
+	
+	var $navTop = $(".header-box").height();
+	//var 
+	if ($scrollTop >= $navTop && $winW > 540){
+		$nav.css({
+			"position" : "fixed",
+			"top" : "0px"
+		});
+		$headerBox.css({
+			"margin-bottom" : "80px"
+		})
+	} else {
+		$nav.css({
+			"position" : "inherit",
+			"top" : "0px"
+		});
+		$headerBox.css({
+			"margin-bottom" : "0px"
+		})
+	}
+}
+moveNav();
+$(window).scroll(function(){
+	moveNav();
+})
+$(window).resize(function(){
+	moveNav();
+}).resize();
+</script>
+</s_t3>
+</body>
+</html>
