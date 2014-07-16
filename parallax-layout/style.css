@@ -12,7 +12,8 @@ nav, section {display:block;}
 /* body */ 
 /* etc init */
 ul, li, ol, dd, dt {list-style: none}
-a {text-decoration: none;}
+a {text-decoration: none;color:#666;}
+a:hover {color:#000;}
 
 button {
 	display: inline-block;
@@ -125,6 +126,7 @@ header h1{margin:0 auto;font-size:4em;color:#fff;}
 
 #category {width: 100%;height: 80px;line-height: 80px;background: #000;color: #fff;z-index: 999;background:#2f292b}
 #category a {color:#fff;}
+#category > ul {clear:both;width:100%;max-width: 1200px;margin: 0 auto;z-index: 10;position: absolute;left:0px;right: 0px}
 #category > ul > li {
 	cursor: pointer;
 	/*
@@ -142,7 +144,6 @@ header h1{margin:0 auto;font-size:4em;color:#fff;}
 	transition-timing-function: ease;
 	*/
 }
-#category > ul {clear:both;width:100%;max-width: 1200px;margin: 0 auto;z-index: 10;position: relative;}
 #category > ul > li {
 	float:left;
 	top:-2px;
@@ -170,7 +171,10 @@ header h1{margin:0 auto;font-size:4em;color:#fff;}
 	-o-border-radius : 10px;
 }
 /*#category > ul > li > ul:before {content:' ';height: 10px;display:block;}*/
-#category > ul > li > a {color: #fff;border-top: 1px solid #353535;}
+#category > ul > li > a {
+	color: #fff;
+	border-top: 1px solid #353535;
+}
 #category > ul > li:hover > p {
 	border-bottom: 1px solid #161616;
 	background: #202020; /* Old browsers */
@@ -184,6 +188,10 @@ header h1{margin:0 auto;font-size:4em;color:#fff;}
 }
 
 /*#category > ul > li:hover > a {border-bottom: 1px solid #161616;}*/
+#category > ul > li.category-dep-2 > ul a,
+#category > ul > li.category-dep-3 > ul > li > ul a {
+	padding-left:10px;
+}
 #category > ul > li.category-dep-2 > ul,
 #category > ul > li.category-dep-2 > ul > li > a,
 #category > ul > li.category-dep-3 > ul > li > ul,
@@ -191,8 +199,13 @@ header h1{margin:0 auto;font-size:4em;color:#fff;}
 	width: 100%;
 	text-align: left;
 	z-index:20;
-	line-height: 0px;
+	line-height: 200%;
+	font-size:13px;
+	display:none;
 	opacity: 0;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 	/*
 	transition: .2s ease-out;
 	-webkit-transition: .2s ease-out;
@@ -202,29 +215,25 @@ header h1{margin:0 auto;font-size:4em;color:#fff;}
 	*/
 }
 #category > ul > li.category-dep-2:hover > ul,
-#category > ul > li.category-dep-3:hover > ul > li > ul {
-	line-height: 200%;
-	opacity: 1;
-}
+#category > ul > li.category-dep-3:hover > ul > li > ul,
 #category > ul > li.category-dep-2:hover > ul > li > a,
 #category > ul > li.category-dep-3:hover > ul > li > ul > li a {
-	line-height: 200%;
 	opacity: 1;
+	display:block;
 }
 #category > ul > li.category-dep-2:hover > ul > li,
 #category > ul > li.category-dep-3:hover > ul > li > ul > li {
 	border-top: 1px solid #353535;border-bottom: 1px solid #161616;
 }
 #category > ul > li.category-dep-3 > ul > li > a {display:none;width: 0px;height: 0px;}
-#category > ul > li.category-dep-3 > ul > li > ul > li > ul,
 #category > ul > li.category-dep-3 > ul > li > ul > li > ul li a {
-
+	width: auto;
 }
 #category > ul > li.category-dep-3 > ul > li > ul > li > ul {
 	background: #333;border-top: 1px solid #353535;
 }
 #category > ul > li.category-dep-3 > ul > li > ul > li > ul > li:before {
-	content : ' ㆍ ';
+	content : ' ㆍ ';float: left;padding-left: 10px;
 }
 #category > ul > li.category-dep-3 > ul > li > ul > li > ul > li:hover {
 	box-shadow: inset 0 1px #4077CB,inset 0 -1px #4077cb;
@@ -243,7 +252,8 @@ header h1{margin:0 auto;font-size:4em;color:#fff;}
 .content-list .list-title {width: 100%;display:block;padding: 12px 0px;color:#E4E24F;font-size:18px;font-weight: bold;letter-spacing: -1px;text-align: left;}
 .content-list .list-dtl {line-height: 140%; height: 65px;display: block;overflow: hidden;font-size: 12px}
 
-.content-info {padding-top: 3%;text-align: center;color:#888;}
+.content-info {padding-top: 5%;margin-top:6%;border-top:4px double #999;text-align: center;color:#888;}
+.content-info:first-child {padding-top: 3%;margin-top:0px;border-top:0px;}
 .content-info hr {border-bottom:1px solid #CCC;border-top:none;max-width: 500px;width: 100%;margin-top:20px;margin-bottom: 30px;display: inline-block;}
 .content-info h2 {font-size:1.7em;}
 .content-info .date span {
@@ -254,12 +264,16 @@ header h1{margin:0 auto;font-size:4em;color:#fff;}
 	margin-top: 10px;
 	color:#fff;
 	font-size: 12px;
-	background: #333;
+	background: #2f292b;
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
+}
+
+.main {
+	min-height: 600px
 }
 
 article {
@@ -272,6 +286,7 @@ article {
 	display:inline-block;
 	padding:6px;
 	margin: 4px 0px;
+	margin-right: 3px;
 	background: #eee;
 	font-size: 12px;
 	font-weight: bold;
@@ -291,7 +306,7 @@ article {
 .tag-box > a:before {content:'ㆍ ';font-weight:bold;}
 
 .page-box {width: 100%}
-.page-list {width:100%;display:block;clear: both;overflow: hidden;padding:20px 0px;margin: 0px;text-align: center;font-size:14px;font-weight: bold;}
+.page-list {width:100%;display:block;clear: both;overflow: hidden;padding:50px 0px;margin: 0px;text-align: center;font-size:14px;font-weight: bold;}
 .page-list a {padding:8px 5px;display: inline-block;}
 .page-list a:first-child {margin-left: 0px}
 .page-list a:hover {color: #E4E24F;}
@@ -317,14 +332,16 @@ article {
 	-o-border-radius:83px;
 	background:#eee;
 	margin: 0 auto;
+	overflow:hidden;
 }
 .bg2 .content-user .user-name {
 	margin-top:10px;
 	font-size: 35px;
 	color:#fff;
+	font-size:1.7em;
 }
 
-input, textarea { /* .comment-input-info  */
+input.basic, textarea { /* .comment-input-info  */
 	padding: 0 10px;
 	background: #fff;
 	border: 1px solid #d8d8d8;
@@ -364,7 +381,7 @@ input:focus, textarea:focus {
 .comment-input-info label:after {content:' *';color:red;}
 
 .comment-input-info .submit {
-	background-color: #222;
+	background-color: #2f292b;
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
 	-ms-border-radius: 50px;
@@ -394,7 +411,6 @@ input:focus, textarea:focus {
 }
 
 .comment-list > .item {
-	border-top:1px solid #ccc;
 	padding-top:20px;
 	padding-bottom:20px;
 	line-height:160%;
@@ -422,20 +438,34 @@ input:focus, textarea:focus {
 	width: 80px;
 	height: 80px;
 	display: block;
-	border: 1px solid #aaa;
+	border: 2px solid #eee;
 	margin: 0 auto;
 	border-radius: 80px;
 	-webkit-border-radius: 80px;
 	-moz-border-radius: 80px;
 	-ms-border-radius: 80px;
 	-o-border-radius: 80px;
+	overflow:hidden;
 }
-
+.comment-list .item .img img {
+	top: 0px;
+	left: 0px;
+	width: 80px;
+	height: 80px;
+}
+.comment-list .item .img a,
+.comment-list .item .img span,
+.comment-reply-list .item-left span {
+	font-size: 0px;
+	width: 0px;
+	height: 0px;
+	display:none;
+}
 .comment-list .item .name:before {content:'* ';color:red;}
 .comment-list .item .name {
-	color: #000;
 	margin-top: 6px;
 	font-size: 14px;
+	font-weight: bold;
 }
 
 .comment-list .item .date {
@@ -450,8 +480,8 @@ input:focus, textarea:focus {
 .comment-list button {
 	width: 25px; 
 	height: 25px;
-	line-height: 25px;
 	vertical-align: middle;
+	margin-top: -3px;
 }
 
 .comment-reply-list .item { 
@@ -470,12 +500,15 @@ input:focus, textarea:focus {
 	text-align: left
 }
 
+.comment-reply-list .item-left a {font-weight: bold;font-size: 14px}
+
 .search-box {
 	position: relative;
 	max-width: 500px;
 	width: 100%;
 	margin : auto;
-	margin-top : 50px;
+	margin-top : 80px;
+	margin-bottom : 80px;
 	text-align: center;
 }
 .search-box input {
@@ -533,6 +566,7 @@ header h1{margin:0 auto;font-size:1.3em;color:#fff;}
 .content-info h2 {font-size:1em;}
 
 #category {height: auto;line-height: 220%;}
+#category > ul {position: relative;}
 #category > ul > li {width: 100%;float: none}
 
 .content-comment {font-size: 13px}
@@ -540,7 +574,7 @@ header h1{margin:0 auto;font-size:1.3em;color:#fff;}
 .content-list li {display: block;float: none;width: 100%;padding:0px;}
 .comment-list .item .item-container > div {float: none}
 .comment-list .item .item-right {padding-left:0px;}
-.comment-list .item .item-left {width:auto;text-align:left;margin-bottom:15px;position: inherit;}
+.comment-list .item .item-left {width:auto;text-align:left;margin-bottom:15px;position: inherit;overflow:hidden;}
 .comment-list .item .item-left > p {display: inline-block;}
 .comment-list .item .img {display:none !important;}
 

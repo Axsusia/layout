@@ -37,25 +37,48 @@
 				</li>
 				<li class="category-dep-2">
 					<p>Notice</p>
+					<s_rct_notice>
 					<ul>
-						<li><a href="#">first notice</a></li>
-						<li><a href="#">secend notice</a></li>
-						<li><a href="#">th notice</a></li>
+						<s_rct_notice_rep>
+						<li><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></li>
+						<s_rct_notice_rep>
 					</ul>
+					</s_rct_notice>
 				</li>
 				<li class="category-dep-3">
 					<p>Category</p>
 					[##_category_list_##]
 				</li>
-				<li class="category-dep-2">
-					<p>Media</p>
+				<li class="category-dep-3">
+					<p>Recent log</p>
 					<ul>
-						<li>Picture</li>
-						<li>Location</li>
-						<li>Tag</li>
+						<li>
+							<a href="#">All</a>
+							<ul>
+								<li>
+									<a href="#">최근 글</a>
+
+									<ul>
+										<s_rctps_rep>
+										<li><a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##] [##_rctps_rep_rp_cnt_##]</a></li>
+										</s_rctps_rep>
+									</ul>
+								</li>
+								<li>
+									<a href="#">최근 댓글</a>
+									<ul>
+										<s_rctrp_rep>
+										<li><a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a></li>
+										</s_rctrp_rep>
+									</ul>
+								</li>
+							</ul>
+						</li>
 					</ul>
 				</li>
-				<li class="category-dep-1"><p>GuestBook</p></li>
+				<li class="category-dep-1">
+					<a href="/guestbook"><p>GuestBook</p></a>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -63,7 +86,7 @@
 	<section class="parallax bg1">
 	</section>
 
-	<section class="container">
+	<section class="container main">
 
 		<!-- 리스트 uu부터 !!!-->
 		<s_list>
@@ -138,25 +161,26 @@
 				<s_rp_guest>
 				<p class="comment-input-info">
 					<label for="NAME">NAME</label>
-					<input class="id anime-btn" type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" placeholder="ID" >
+					<input class="id anime-btn basic" type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" placeholder="ID" >
 				</p>
 				<p class="comment-input-info">
 					<label for="PASSWORD">PASSWORD</label>
-					<input class="password anime-btn" type="text" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" placeholder="PASSWORD">
+					<input class="password anime-btn basic" type="text" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" placeholder="PASSWORD">
 				</p>
 				<p class="comment-input-info">
 					<label for="HOMEPAGE">HOMEPAGE</label>
-					<input class="homepage anime-btn" type="text" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" placeholder="HOMEPAGE">
+					<input class="homepage anime-btn basic" type="text" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" placeholder="HOMEPAGE">
 				</p>
 				</s_rp_guest>
 				<p class="comment-input-info">
-					<input type="checkbox" name="[##_rp_input_is_secret_##]"/><label for="SECRET">SECRET</label>
+					<input type="checkbox" name="[##_rp_input_is_secret_##]" style="float:left;margin-top:6px;margin-right:5px"/>
+					<label for="SECRET">SECRET</label>
 				</p>
 				</s_rp_member>
 				<p class="comment-input-info">
-					<textarea class="comment anime-btn" name="[##_rp_input_comment_##]" placeholder="write"></textarea>
+					<textarea class="comment anime-btn basic" name="[##_rp_input_comment_##]" placeholder="write"></textarea>
 				</p>
-				<p class="comment-input-info">
+				<p class="comment-input-info" style="margin-top:20px">
 					<button type="submit" value="댓글 달기" onclick="[##_rp_onclick_submit_##]" class="submit anime-btn">Submit</button>
 				</p>
 			</div>
@@ -186,7 +210,7 @@
 							<s_rp2_rep>
 							<li class="item" id="[##_rp_rep_id_##]">
 								<div class="item-container [##_rp_rep_class_##]">
-									<div class="item-left">
+									<div class="item-left word-hidden">
 										<button type="button" class="delete anime-btn" onclick="[##_rp_rep_onclick_delete_##]">-</button> [##_rp_rep_name_##]
 										<!--<p class="img">[##_rp_rep_name_##]</p>-->
 										<!--
@@ -227,23 +251,30 @@
 		<div class="content-comment">
 			<s_guest_input_form>
 			<div class="comment-input-box">
+				<s_guest_member>
+				<s_guest_form>
 				<p class="comment-input-info">
 					<label for="NAME">NAME</label>
-					<input class="id anime-btn" type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" placeholder="ID" >
+					<input class="id anime-btn basic" type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" placeholder="ID" >
 				</p>
 				<p class="comment-input-info">
 					<label for="PASSWORD">PASSWORD</label>
-					<input class="password anime-btn" type="text" name="[##_guest_input_password_##]" value="[##_guest_password_##]" placeholder="PASSWORD">
+					<input class="password anime-btn basic" type="text" name="[##_guest_input_password_##]" value="[##_guest_password_##]" placeholder="PASSWORD">
 				</p>
 				<p class="comment-input-info">
 					<label for="HOMEPAGE">HOMEPAGE</label>
-					<input class="homepage anime-btn" type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" placeholder="HOMEPAGE">
+					<input class="homepage anime-btn basic" type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" placeholder="HOMEPAGE">
 				</p>
+				</s_guest_form>
 				<p class="comment-input-info">
-					<input type="checkbox" name="[##_guest_input_is_secret_##]"/><label for="SECRET">SECRET</label>
-					<textarea class="comment anime-btn" name="[##_guest_textarea_body_##]" placeholder="write"></textarea>
+					<input type="checkbox" name="[##_guest_input_is_secret_##]" style="float:left;margin-top:6px;margin-right:5px"/>
+					<label for="SECRET">SECRET</label>
 				</p>
+				</s_guest_member>
 				<p class="comment-input-info">
+					<textarea class="comment anime-btn basic" name="[##_guest_textarea_body_##]" placeholder="write"></textarea>
+				</p>
+				<p class="comment-input-info" style="margin-top:20px">
 					<button type="button" value="댓글 달기" onclick="[##_guest_onclick_submit_##]" class="submit anime-btn">Submit</button>
 				</p>
 			</div>
@@ -257,7 +288,7 @@
 					<s_guest_rep>
 					<li class="item word-break" id="[##_guest_rep_id_##]">
 						<div class="item-container [##_guest_rep_class_##]">
-							<div class="item-left">
+							<div class="item-left word-hidden">
 								<p class="img">[##_guest_rep_name_##]</p>
 								<p class="name">[##_guest_rep_name_##]</p>
 								<p class="date">[##_guest_rep_date_##]</p>
@@ -274,10 +305,12 @@
 							<li class="item" id="[##_guest_rep_id_##]">
 								<div class="item-container [##_guest_rep_class_##]">
 									<div class="item-left">
-										<!--<p class="img">[##_guest_rep_name_##]</p>-->
+										<button type="button" onclick="[##_guest_rep_onclick_delete_##]" class="delete anime-btn">-</button> [##_guest_rep_name_##]
+										<!--<p class="img">[##_guest_rep_name_##]</p>
 										<p class="name">[##_guest_rep_name_##]</p>
 										<p class="date">[##_guest_rep_date_##]</p>
 										<p class="button" title="Reply Delete"><button type="button" onclick="[##_guest_rep_onclick_delete_##]" class="delete anime-btn">-</button></p>
+										-->
 									</div>
 									<div class="item-right">
 										<p class="dtl">[##_guest_rep_desc_##]</p>
@@ -312,8 +345,8 @@
 
 	<section class="parallax bg2">
 		<div class="content-user">
-			<div class="user-img"><img src="" title="userName" alt="user-name"></div>
-			<div class="user-name">qpess</div>
+			<div class="user-img"><img src="[##_image_##]" title="userName" alt="user-name" width="83" height="83"></div>
+			<div class="user-name">[##_blogger_##]</div>
 		</div>
 	</section>
 
@@ -322,22 +355,8 @@
 
 	<section class="container">
 		<div class="search-box">
-			<p><input class="anime-btn" type="text" placeholder="search" /></p>
+			<p><input class="anime-btn basic" type="text" placeholder="search" /></p>
 			<p><button class="search anime-btn"></button></p>
-		</div>
-		<div class="recent-box">
-			<div class="recent-article-box">
-				<dl>
-					<dt>[최근글]</dt>
-					<dd>1. Setting Blog for article</dd>
-				</dl>
-			</div>
-			<div class="recent-reply-box">
-				<dl>
-					<dt>[최근댓글]</dt>
-					<dd></dd>
-				</dl>
-			</div>
 		</div>
 	</section>
 
