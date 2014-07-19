@@ -1,4 +1,4 @@
-(function($) {
+var moveBg = function () {
 	//$("html").niceScroll();
 	
 	// Check if the section has the parallax class.
@@ -32,4 +32,4 @@
 			// window scroll Ends
 		});
 	});
-})(jQuery);
+};

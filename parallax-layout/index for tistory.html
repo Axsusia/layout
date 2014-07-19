@@ -98,9 +98,10 @@
 			<s_list_rep>
 			<li>
 				<a href="[##_list_rep_link_##]">
-					<p class="list-img"><img src="http://imgnews.naver.net/image/311/2014/07/03/1404366848920_99_20140703150403.png" alt="title img"></p>
+					<p class="list-img"><span>이미지 로딩중...</span></p>
 					<p class="list-title word-hidden">[##_list_rep_title_##]</p>
-					<p class="list-dtl word-break" >[##_list_rep_regdate_##]</p>
+					<p class="list-dtl word-break"></p>
+					<p class="list-date">[##_list_rep_regdate_##]</p>
 					<!--<span class="content-list-author">ssw</span>-->
 					<!--<span class="content-list-date">2014.06.31</span>-->
 				</a>
@@ -396,6 +397,7 @@ var moveNav = function () {
 		$headerBox.css({
 			"margin-bottom" : "80px"
 		})
+		moveBg();
 	} else {
 		$nav.css({
 			"position" : "inherit",
@@ -413,6 +415,29 @@ $(window).scroll(function(){
 $(window).resize(function(){
 	moveNav();
 }).resize();
+
+function callImgList(){ 
+	var $list = $(".content-list li");
+
+	$list.each(function(idx){
+		var liEl = this;
+		var listNum = $(this).find("a").attr("href");
+		var url = location.href.split("/")[0] + listNum;
+		$.get(listNum, function(res){
+			var shortText = $(res).find("article .tt_article_useless_p_margin > p").text();
+			var textMainImg = $(res).find("article .imageblock span img").eq(0).attr("src") || "http://ts.daumcdn.net/custom/blog/165/1651329/skin/images/noImg.jpg";
+
+			if(textMainImg){
+				var imgHtml = "<img src='"+textMainImg+"' alt='보조이미지'/>"
+				$(liEl).find(".list-img").html(imgHtml);
+			}
+			if (shortText) {
+				$(liEl).find(".list-dtl").html(shortText);
+			}
+		})
+	})
+}
+callImgList();
 </script>
 </s_t3>
 </body>
