@@ -23,7 +23,7 @@
 <div class="wrap">
 	<header>
 		<div class="header-box">
-			<div class="header-title"><h1>qpress</h1></div>
+			<div class="header-title"><a href="/"><h1>qpress</h1></a></div>
 			<div class="header-info">
 				<p>This is infometion</p>
 				<p>teat</p>
@@ -430,6 +430,8 @@ function callImgList(){
 			if(textMainImg){
 				var imgHtml = "<img src='"+textMainImg+"' alt='보조이미지'/>"
 				$(liEl).find(".list-img").html(imgHtml);
+			} else {
+				$(liEl).find(".list-img").html("");
 			}
 			if (shortText) {
 				$(liEl).find(".list-dtl").html(shortText);
