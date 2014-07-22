@@ -25,9 +25,8 @@
 		<div class="header-box">
 			<div class="header-title"><a href="/"><h1>qpress</h1></a></div>
 			<div class="header-info">
-				<p>This is infometion</p>
-				<p>teat</p>
-				<p>Blog</p>
+				<p>Welcome</p>
+				<p>qpress'Blog</p>
 			</div>
 		</div>
 		<nav id="category">
@@ -354,12 +353,14 @@
 	<section class="container">
 	</section>
 
+	<s_search>
 	<section class="container">
 		<div class="search-box">
-			<p><input class="anime-btn basic" type="text" placeholder="search" /></p>
-			<p><button class="search anime-btn"></button></p>
+			<p><input class="anime-btn basic" type="text" placeholder="search" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"/></p>
+			<p><button type="button" class="search anime-btn" onclick="[##_search_onclick_submit_##]"></button></p>
 		</div>
 	</section>
+	</s_search>
 
 	<footer class="parallax bg3">
 		<div class="footer-info-box">
