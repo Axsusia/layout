@@ -36,7 +36,9 @@ div.container-header
 
 
 .container-header,
-.container-footer {
+.container-footer,
+.container-path,
+.container-article {
 	width: 100%;
 	max-width: 1100px;
 	margin: 0 auto;
@@ -49,6 +51,7 @@ div.container-header
 
 .container-header nav {
 	float: right;
+	font-size: 13px;
 }
 
 .container-header nav >  ul >  li > a {
@@ -62,8 +65,10 @@ div.container-header
 }
 
 .container-header nav > ul > li > ul > li {
+	height: 35px;
+	line-height: 35px;
+	padding: 0px 15px;
 	float: left;
-	padding: 15px 15px;	
 	position: relative;
 }
 
@@ -71,10 +76,11 @@ div.container-header
 	width: 200px;
 	display: none;
 	position: absolute;
+	top:35px;
 	right: 0px;
-	background:  #333;
-	color: #fff;
-	padding: 15px;
+	background:  #fff;
+	color: #ccc;
+	padding-top: 5px;
 }
 
 .container-header nav > ul > li > ul > li:hover {
@@ -85,18 +91,39 @@ div.container-header
 	display: block;
 }
 .container-header nav > ul > li > ul > li:hover a {
-	color: #fff;
+	color: #ccc;
 }
 .container-header nav > ul > li > ul > li > ul > li {
 	line-height: 170%;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
 }
-.contents-list ul {
+.container-header nav > ul > li > ul > li > ul > li:first-child {
+	border-top: 1px solid #ccc;
+	padding-top: 15px;
+}
+.container-header nav > ul > li > ul > li > ul > li:last-child {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+}
+.container-header nav > ul > li > ul > li > ul > li:hover a {
+	color: #000
+}
+
+.path {
+	background: #eee;
+	padding: 10px 0px;
+}
+
+section.list .contents-list ul {
 	width: 100%;
 	clear: both;
 	overflow: hidden;
 }
 
-.contents-list ul li {
+section.list .contents-list ul li {
 	display: block;
 	width: 25%;
 	height: 250px;
@@ -105,7 +132,7 @@ div.container-header
 	background: #eee;
 }
 
-.contents-list > ul > li > div {
+section.list .contents-list > ul > li > div {
 	display: none;
 	height: 100%;
 	width: 100%;
@@ -113,23 +140,53 @@ div.container-header
 	position: relative;
 }
 
-.contents-list > ul > li:hover > div {
+section.list .contents-list > ul > li:hover > div {
 	display: block;
 }
 
-.contents-list > ul > li > div > div {
+section.list .contents-list > ul > li > div > div {
 	position: absolute;
 }
 
-.contents-list > ul > li > div > .summary {
+section.list .contents-list > ul > li > div > .summary {
 	padding: 15px;
 	line-height: 150%;
 }
 
-.contents-list > ul > li > div > .date {
+section.list .contents-list > ul > li > div > .date {
 	bottom: 0px;
 	line-height: 100% !important;
 	padding: 10px;
+}
+
+section.article {
+	background: #efefef;
+}
+
+section.article .contents {
+	padding-left: 300px;
+	padding-bottom: 150px;
+	clear: both;
+	position: relative;
+}
+
+section.article .contents .contents-header {
+	width: 270px;
+	position: absolute;
+	margin-left: -300px;
+	padding-top: 30px;
+	top: 0px;
+	color: #fff;
+	text-align: right;
+}
+
+section.article .contents .contents-body {
+	background: #fff;
+	padding: 30px;
+}
+
+section.article .contents .box-article {
+	margin-bottom: 30px;
 }
 
 footer {
