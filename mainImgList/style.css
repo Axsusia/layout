@@ -15,6 +15,23 @@ ul,li,ol,dd,dt,dl {
 	list-style: none;
 }
 
+input, textarea {
+	padding : 8px;
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 0px #eee;
+	-webkit-box-shadow: 2px 2px 0px #eee;
+	-moz-box-shadow: 2px 2px 0px #eee;
+	-ms-box-shadow: 2px 2px 0px #eee;
+	-o-box-shadow: 2px 2px 0px #eee;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	font-size: 13px;
+	cursor: pointer;
+}
+
 div.wrapper {
 	width: 100%;
 }
@@ -112,9 +129,26 @@ div.container-header
 	color: #000
 }
 
-.path {
+section.path {
+	display: block;
 	background: #eee;
-	padding: 10px 0px;
+	box-shadow: 2px 0px 3px #000;
+	-webkit-box-shadow: 2px 0px 3px #000;
+	-moz-box-shadow: 2px 0px 3px #000;
+	-ms-box-shadow: 2px 0px 3px #000; 
+	-o-box-shadow: 2px 0px 3px #000;
+	height: 45px;
+	line-height: 45px;
+}
+
+section.path ul {
+	clear: both;
+	overflow: hidden;
+}
+
+section.path ul li {
+	float: left;
+	padding: 0px 10px;
 }
 
 section.list .contents-list ul {
@@ -160,7 +194,7 @@ section.list .contents-list > ul > li > div > .date {
 }
 
 section.article {
-	background: #efefef;
+	background: #ccc;
 }
 
 section.article .contents {
@@ -180,15 +214,88 @@ section.article .contents .contents-header {
 	text-align: right;
 }
 
+section.article .contents .contents-header span {
+	font-weight: bold;
+}
+
+section.article .contents .contents-header .box-author:before {
+	color: red;
+	content: 'by ';
+}
+
+section.article .contents .contents-header .box-date:before {
+	content: '[';
+}
+
+section.article .contents .contents-header .box-date:after {
+	content: ']';
+}
+
 section.article .contents .contents-body {
 	background: #fff;
 	padding: 30px;
+}
+
+section.article .contents .contents-body label {
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+section.article .contents .contents-body label:before {
+	margin-top: 0px;
+}
+
+section.article .contents .contents-body label:before {
+	content : '* ';
+	color : red;
+	font-weight: bold;
+}
+
+section.article .contents .contents-body textarea {
+	width: 100%;
+	height: 200px;
+	display: block;
+}
+
+section.article .contents .contents-body .btn-box {
+	text-align: center;
+}
+section.article .contents .contents-body .btn-box button {
+	margin-top : 20px;
+	width: 100px;
+	padding: 10px;
+	background: #efefef;
+	box-shadow: 1px 1px 0px #ccc;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+section.article .contents .contents-body .btn-box button:hover {
+	background: #333;
+	color: #fff;
+	box-shadow: 1px 1px 0px #ddd;
 }
 
 section.article .contents .box-article {
 	margin-bottom: 30px;
 }
 
+section.article .contents .box-cmt-list,
+section.article .contents .box-cmt {
+	border-top: 1px solid #eee;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+
 footer {
 	background: #eee;
+	padding: 50px 0px;
 }

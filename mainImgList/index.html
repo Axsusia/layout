@@ -50,7 +50,7 @@
 		<div class="container-path">
 			<ul>
 				<li>홈</li>
-				<li></li>
+				<li>카테 2</li>
 			</ul>
 		</div>
 	</section>
@@ -92,8 +92,9 @@
 			<!-- content -->
 			<div class="contents">
 				<div class="contents-header">
-					<h2>글 확인</h2>
-					<span>2023.11.23</span>
+					<h2>front skill developer 시작하</h2>
+					<span class="box-author">엑수시아</span>
+					<span class="box-date">2023.11.23</span>
 				</div>
 				<div class="contents-body">
 					<div class="box-article">
@@ -101,25 +102,44 @@
 					</div>
 					<div class="box-cmt">
 						<div class="box-cmt-input">
-							<label>id</label>
-							<input type="text">
-							<label>password</label>
-							<input type="password">
-							<label>homepage</label>
-							<input type="text">
-							<label>comment</label>
-							<textarea></textarea>
+							<p>
+								<label>ID</label>
+								<input type="text">
+							</p>
+							<p>
+								<label>PASSWORD</label>
+								<input type="password">
+							</p>
+							<p>
+								<label>HOMEPAGE</label>
+								<input type="text">
+							</p>
+							<p>
+								<label>COMMENT</label>
+								<textarea></textarea>
+							</p>
+							<p class="btn-box">
+								<button type="submit">저장하기</button>
+							</p>
 						</div>
 						<div class="box-cmt-list">
 							<ul class="cmt-list">
 								<li>
 									<div class="cmt">
-										코멘트 내용 추가 입니다.
+										<div class="box-input">
+											<span class="">axsusia</span>
+											<span>2014.11.11</span>
+										</div>
+										<p>코멘트 내용 추가 입니다. test test</p>
 									</div>
 									<ul class="cmt-re-list">
 										<li>
 											<div class="cmt-re">
-												
+												<div>
+													<span>axsusia</span>
+													<span>2013.11.11</span>
+												</div>
+												<p>코멘트 리플내용</p>
 											</div>
 										</li>
 									</ul>
@@ -140,10 +160,16 @@
 		</div>
 	</footer>
 </div>
+
 <script>
+function choseColor() {
+	console.log("test.");
+}
 (function () {
 	console.log("test for test ");
+
 })()
 </script>
+
 </body>
 </html>
