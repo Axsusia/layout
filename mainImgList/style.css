@@ -107,8 +107,8 @@ div.container-header
 .container-header nav > ul > li > ul > li:hover ul {
 	display: block;
 }
-.container-header nav > ul > li > ul > li:hover a {
-	color: #ccc;
+.container-header nav > ul > li > ul > li:hover > a {
+	color: #fff;
 }
 .container-header nav > ul > li > ul > li > ul > li {
 	line-height: 170%;
@@ -124,6 +124,9 @@ div.container-header
 .container-header nav > ul > li > ul > li > ul > li:last-child {
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 15px;
+}
+.container-header nav > ul > li > ul > li > ul > li > a {
+	color: #ccc;
 }
 .container-header nav > ul > li > ul > li > ul > li:hover a {
 	color: #000
@@ -148,7 +151,19 @@ section.path ul {
 
 section.path ul li {
 	float: left;
-	padding: 0px 10px;
+	padding: 0px 0px;
+}
+
+section.path ul li:after {
+	width: 30px;
+	display: inline-block;
+	content: ' > ';
+	text-align: center;
+}
+
+section.path ul li:last-child:after {
+	width: 0px;
+	content: '';
 }
 
 section.list .contents-list ul {
@@ -187,10 +202,31 @@ section.list .contents-list > ul > li > div > .summary {
 	line-height: 150%;
 }
 
-section.list .contents-list > ul > li > div > .date {
+section.list .contents-list > ul > li > div > .info {
+	width: 100%;
 	bottom: 0px;
 	line-height: 100% !important;
 	padding: 10px;
+	box-shadow: 0px -4px -3px #000;
+	-webkit-box-shadow: 0px -4px -3px #000;
+	-moz-box-shadow: 0px -4px -3px #000;
+	-ms-box-shadow: 0px -4px -3px #000;
+	-o-box-shadow: 0px -4px -3px #000;
+}
+
+section.list .contents-list > ul > li > div > .info .reply-cnt {
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	color: #fff;
+	background: red;
+	font-size: 12px;
+	padding: 3px 2px;
 }
 
 section.article {
@@ -294,6 +330,16 @@ section.article .contents .box-cmt {
 	padding-top: 20px;
 }
 
+section.article .contents .box-cmt-list .cmt-list > li {
+	margin-bottom: 20px;
+	padding: 20px 0px;
+	background: #eee
+}
+
+section.article .contents .box-cmt-list .cmt-re-list > li {
+	margin-top: 20px;
+	margin-left: 20px;
+}
 
 footer {
 	background: #eee;
