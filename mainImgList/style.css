@@ -135,11 +135,13 @@ div.container-header
 section.path {
 	display: block;
 	background: #eee;
+	/*
 	box-shadow: 2px 0px 3px #000;
 	-webkit-box-shadow: 2px 0px 3px #000;
 	-moz-box-shadow: 2px 0px 3px #000;
 	-ms-box-shadow: 2px 0px 3px #000; 
 	-o-box-shadow: 2px 0px 3px #000;
+	*/
 	height: 45px;
 	line-height: 45px;
 }
@@ -333,7 +335,8 @@ section.article .contents .box-cmt {
 section.article .contents .box-cmt-list .cmt-list > li {
 	margin-bottom: 20px;
 	padding: 20px 0px;
-	background: #eee
+	background: #eee;
+
 }
 
 section.article .contents .box-cmt-list .cmt-re-list > li {
